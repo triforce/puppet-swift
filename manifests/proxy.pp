@@ -134,7 +134,6 @@ class swift::proxy(
 ) {
 
   include ::swift::params
-  include ::concat::setup
 
   Swift_config<| |> ~> Service['swift-proxy']
 
