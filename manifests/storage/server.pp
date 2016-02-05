@@ -124,6 +124,7 @@ define swift::storage::server(
   $updater_concurrency    = $::processorcount,
   $reaper_concurrency     = $::processorcount,
   $auditor_concurrency    = 1,
+  $auditor_files_per_second = 20,
   $auditor_bytes_per_second = 10000000,
   $log_facility           = 'LOG_LOCAL2',
   $log_level              = 'INFO',
