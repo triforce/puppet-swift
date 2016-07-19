@@ -127,6 +127,7 @@ class swift::proxy(
   $write_affinity            = undef,
   $write_affinity_node_count = undef,
   $node_timeout              = undef,
+  $object_post_as_copy       = true,
   $manage_service            = true,
   $enabled                   = true,
   $package_ensure            = 'present'
@@ -139,6 +140,7 @@ class swift::proxy(
 
   validate_bool($account_autocreate)
   validate_bool($allow_account_management)
+  validate_bool($object_post_as_copy)
   validate_array($pipeline)
 
   if($write_affinity_node_count and ! $write_affinity) {
