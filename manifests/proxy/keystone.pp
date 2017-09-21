@@ -10,10 +10,6 @@
 #    Swift operator roles must be defined in swift::keystone::auth because
 #    keystone API access is usually not available on Swift proxy nodes.
 #
-#  [*is_admin*]
-#   (Optional) Set to true to allow users to set ACLs on their account.
-#    Defaults to true.
-#
 # [*reseller_prefix*]
 #   (Optional) The prefix used for reseller URL.
 #   Defaults to 'AUTH_'
@@ -25,7 +21,6 @@
 #
 class swift::proxy::keystone(
   $operator_roles      = ['admin', 'SwiftOperator'],
-  $is_admin            = true,
   $reseller_prefix     = 'AUTH_'
 ) {
 
