@@ -147,6 +147,7 @@ class swift::proxy(
   $write_affinity            = undef,
   $write_affinity_node_count = undef,
   $node_timeout              = undef,
+  $object_post_as_copy       = true,
   $manage_service            = true,
   $enabled                   = true,
   $package_ensure            = 'present',

@@ -167,6 +167,9 @@ define swift::storage::server(
   $log_statsd_default_sample_rate = '1.0',
   $log_statsd_sample_rate_factor  = '1.0',
   $log_statsd_metric_prefix       = '',
+  $auditor_bytes_per_second       = 10000000,
+  $auditor_files_per_second       = 20,
+  $auditor_concurrency            = 1,
 ) {
 
   include ::swift::deps
